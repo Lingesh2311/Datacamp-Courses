@@ -1,2 +1,3 @@
-.md
-.lock
+*.md
+*.lock
+Pipfile
