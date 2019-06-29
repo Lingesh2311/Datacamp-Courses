@@ -32,5 +32,6 @@ Chapter 1 contains the scripts and notebooks for **Clustering** in Python.
 ### Number of Clusters
 - Refer to the Elbow plot tutorial [here](https://github.com/Lingesh2311/Python-Basics/blob/master/EDA%20Basic%20Tutorials/K-means%20Elbow%20Method.ipynb)
 
-
-
+### Disadvantages of KMeans
+- Lack of flexibility in cluster shape 
+- Lack of probabilistic cluster assignment
