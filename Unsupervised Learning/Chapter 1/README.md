@@ -35,3 +35,11 @@ Chapter 1 contains the scripts and notebooks for **Clustering** in Python.
 ### Disadvantages of KMeans
 - Lack of flexibility in cluster shape 
 - Lack of probabilistic cluster assignment
+
+### Transforming features for better clustering
+- The Variance of features correspond to influence on clustering
+- **StandardScaler** can be used to transform each feature to have $0$ mean and variance $1$.
+- Use `fit()` and `transform()`
+- Other preprocessing techniques for clustering: MaxAbsScaler and Normalizer
+
+- 
