@@ -41,5 +41,3 @@ Chapter 1 contains the scripts and notebooks for **Clustering** in Python.
 - **StandardScaler** can be used to transform each feature to have $0$ mean and variance $1$.
 - Use `fit()` and `transform()`
 - Other preprocessing techniques for clustering: MaxAbsScaler and Normalizer
-
-- 
