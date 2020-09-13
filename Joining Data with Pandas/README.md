@@ -152,12 +152,15 @@ We can verify the concatenation using the `.concatenate(verify_integrity=True)` 
 
 The default call here is `outer`. the calling function is `pd.merge_ordered(df1, df2)`.
 
-This is used for merging time series data from two tables.
+This is used for merging time series data / ordered data from two tables.
 ```python
 pd.merge_ordered(appl, mcd, on='date', suffixes=('_appl','_mcd'))
 ```
 
 We can fill the missing data using a technique called forward filling.
+```python
+pd.merge_ordered(appl, mcd, on='date', suffixes=('_appl', '_mcd'), fill_method='ffill')
+```
 
 ### Using `merge_asof()`
 
