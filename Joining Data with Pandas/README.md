@@ -164,6 +164,41 @@ pd.merge_ordered(appl, mcd, on='date', suffixes=('_appl', '_mcd'), fill_method='
 
 ### Using `merge_asof()`
 
+This is similar to the `merge_ordered()` being performed on a left-join. This can be considered as the situation where the columns don't exactly match but they are the closest matches.
+
+```python
+pd.merge_asof(table_1, table_2, on='col_name', suffixes=('_tab1', '_tab2'))
+```
+
+This means the tables 1 and 2 are taken in such a way that the all rows from the first table are considered for the join and the additional columns that are coming from the second table are matched based on their proximity to the column in the first table.
+
+The sense of direction can be specified using the `direction` parameter. Setting it to `forward` will do the job of filling the smallest closer value in the key column, and the vice versa when we fill using `backward` logic.
+
+This is used for sampling data for a process, and for developing a training set (no data leakage).
+
 ### Selecting data with `.query()`
 
+This accepts an input string which is used to determine what rows are returned. This string is similar to the statement after the WHERE clause in SQL statement.
+
+We can use the `and` and `or` conditionals to specify the condition we are looking for in the column of the table.
+
 ### Reshaping data with `.melt()`
+
+**Wide vs. Long Format**
+
+1. **Wide Format**: Whent the data of every row relates to only one subject then we call the table to be in wide format
+2. **Long Format**: When the information of one subject is spread and segregated by the type of one/more type of columns it is said to be in a long format.
+
+**Wide format** data is human readable<br>
+**Long format** data is computer friendly
+
+The `.melt()` method can be used to sideways melt the data from **wide** to **long** format.
+
+The main arguments are as follows:
+- `id_vars`: The identifiable variables which can be used to determine the identifier columns that needs to be separated upon.
+- `value_vars`: The value variables which are used to show the variable values that are used to denote the values that are to be kept in the variable column of the **long** data.
+- `var_name`: This allows the name to be given to the variable column
+- `value_name`: This allows the name to be given to the value column
+
+
+
